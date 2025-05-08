@@ -1,3 +1,5 @@
+![BANNER](/img/benner.png)
+
 # 🏠 HOME ASSISTANT with Two Zigbee Networks via Zigbee2MQTT
 
 [![Donate via PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
