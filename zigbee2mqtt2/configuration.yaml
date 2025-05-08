@@ -1,0 +1,54 @@
+homeassistant:
+  enabled: true
+advanced:
+  network_key:
+    - 174
+    - 90
+    - 55
+    - 133
+    - 97
+    - 210
+    - 220
+    - 243
+    - 42
+    - 197
+    - 36
+    - 174
+    - 123
+    - 156
+    - 47
+    - 132
+  pan_id: 60218
+  ext_pan_id:
+    - 193
+    - 183
+    - 157
+    - 129
+    - 131
+    - 96
+    - 95
+    - 91
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+  channel: 12
+  transmit_power: 20
+  log_level: debug
+external_converters: {}
+mqtt:
+  base_topic: zigbee2mqtt2
+  server: "------------------"
+  user: "------------------"
+  password: "------------------"
+  reject_unauthorized: true
+serial:
+  port: "------------------"
+  adapter: zstack
+  baudrate: 115200
+frontend:
+  enabled: true
+  port: 8099
+device_options:
+  legacy: false
+version: 4
+devices: {}
