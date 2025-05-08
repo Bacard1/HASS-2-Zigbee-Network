@@ -2,68 +2,76 @@
 
 [![Donate via PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
+[![Български](https://img.shields.io/badge/Български-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
+)](BG.md)
 
-Build a reliable, scalable, and flexible Zigbee infrastructure in Home Assistant by using **two independent Zigbee networks** managed via **Zigbee2MQTT**, with the goal of improving:
+Building a reliable, scalable, and flexible Zigbee infrastructure in Home Assistant using two independent Zigbee networks managed by Zigbee2MQTT, to improve:
 - Coverage and stability
-- Scalability for a growing number of devices
-- Resilience to hardware or software failures
+- Scalability with an increasing number of devices
+- Resilience against potential hardware or software failures
 
 ---
 
-## 📦 Contents
+## 📦 Table of Contents
 
 - [🏠 HOME ASSISTANT with Two Zigbee Networks via Zigbee2MQTT](#-home-assistant-with-two-zigbee-networks-via-zigbee2mqtt)
-  - [📦 Contents](#-contents)
+  - [📦 Table of Contents](#-table-of-contents)
   - [⚙️ Hardware](#️-hardware)
-  - [🛠️ Software \& Integrations](#️-software--integrations)
+  - [🛠️ Software and Integrations](#️-software-and-integrations)
     - [📦 Adding Zigbee2MQTT Repositories](#-adding-zigbee2mqtt-repositories)
     - [🔌 Zigbee2MQTT Configuration](#-zigbee2mqtt-configuration)
-      - [`zigbee2mqtt1` Configuration](#zigbee2mqtt1-configuration)
-      - [`zigbee2mqtt2` Configuration](#zigbee2mqtt2-configuration)
-      - [Finish Installation](#finish-installation)
-      - [Optional: Add Sensors in Home Assistant](#optional-add-sensors-in-home-assistant)
+      - [**zigbee2mqtt1:**](#zigbee2mqtt1)
+      - [**zigbee2mqtt2:**](#zigbee2mqtt2)
+      - [Installing and Navigating the Zigbee2MQTT Add-on:](#installing-and-navigating-the-zigbee2mqtt-add-on)
 
 ---
 
 ## ⚙️ Hardware
-
-|Image|Model|Network Name|Chipset|USB|Wi-Fi|LAN|VPN|
+|img|model|network name|Chipset|USB port|Wi-Fi|LAN port|VPN|
 |----|----|----|----|----|----|----|----|
 |![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
 |![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
 
----
-
-## 🛠️ Software & Integrations
-
-> ⚠️ **NOTE:** You need to have MQTT Broker and Zigbee2MQTT already installed!  
-> For installation instructions, see [HERE](https://github.com/Bacard1/HASS-ZigbeeNetwork)
+## 🛠️ Software and Integrations
+> [!CAUTION]
+> You must already have "MQTT Broker" and "Zigbee2MQTT" installed to continue!!!
+> If you don't have "MQTT Broker" and "Zigbee2MQTT" installed, detailed information can be found [HERE](https://github.com/Bacard1/HASS-ZigbeeNetwork)
 
 ### 📦 Adding Zigbee2MQTT Repositories
+> [!CAUTION]
+> To install a second Zigbee2MQTT add-on, you need to add the repository a second, third... time!
 
-To install a second Zigbee2MQTT instance, add the same repository multiple times by adding extra slashes at the end:
+> [!WARNING]
+> To add the same repository more than once, append a "/" at the end of the repository URL or select from the table below:
 
-|Instance|Add Link|
-|----|----|
-|zigbee2mqtt1|[![Add Repo](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/)|
-|zigbee2mqtt2|[![Add Repo](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt//)|
+|zigbee2mqtt|zigbee2mqtt1|zigbee2mqtt2|
+|----|----|----|
+|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt//)|
 
-> 📷 Result:
-![Two zigbee2mqtt repos](/img/2repo_zigbee2mqtt.png)
 
----
+|zigbee2mqtt3|zigbee2mqtt4|zigbee2mqtt5
+|----|----|----|
+|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt///)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt////)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/////)|
+
+_Result:_
+![Two zigbee2mqtt repositories](/img/2repo_zigbee2mqtt.png)
 
 ### 🔌 Zigbee2MQTT Configuration
 
-> ⚠️ **Before starting:** Create folders and files manually as shown in the image. Do not install the add-ons yet!
+> [!CAUTION]
+> In the image, number 1 shows the directory, and numbers 2 and 3 show the new folders you need to create manually. <br>
+> Do not install the add-ons before reaching the step [Installing and Navigating the Zigbee2MQTT Add-on:](#installing-and-navigating-the-zigbee2mqtt-add-on)
 
-![Folder structure](/img/zigbee2mqtt_folder.png)
+![zigbee2mqtt](/img/zigbee2mqtt_folder.png)
 
----
+#### **zigbee2mqtt1:**
 
-#### `zigbee2mqtt1` Configuration
+In the "zigbee2mqtt1" folder we will configure the following coordinator:
 
-Create `configuration.yaml` inside the `zigbee2mqtt1` folder and fill in your values:
+|![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
+|----|----|----|----|----|----|----|----|
+
+Create a new file "configuration.yaml" in the "zigbee2mqtt1" folder which should look like this:
 
 ```yaml
 homeassistant:
@@ -119,14 +127,28 @@ device_options: {}
 devices: {}
 ```
 
-> ⚠️ Replace all `"------------------"` placeholders with your own values.
-> Create a Home Assistant user (e.g., "zigbee2") with no admin rights via **Settings → People → Users**.
+> [!CAUTION]
+> All fields containing "------------------" must be filled in by you! <br>
+> To create "user1", follow these steps: <br>
+> 📁 Step 1: Open Home Assistant → Settings → Add-ons → Mosquitto broker → Settings <br>
+> ✏️ Step 2: Add the user from the Home Assistant UI <br>
+> Go to "Settings" → "People → Users" <br>
+> Click “➕ Add user” <br>
+> Enter: <br>
+> Name: zigbee2 <br>
+> Username: zigbee2 <br>
+> Password: your_choice <br>
+> No admin rights <br>
+> 🔒 This user automatically gets access to Mosquitto if the Mosquitto Add-on is configured with customize: active: false (default setting).
 
----
+#### **zigbee2mqtt2:**
 
-#### `zigbee2mqtt2` Configuration
+In the "zigbee2mqtt2" folder we will configure the following coordinator:
 
-Create `configuration.yaml` inside the `zigbee2mqtt2` folder:
+|![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
+|----|----|----|----|----|----|----|----|
+
+Create a new file "configuration.yaml" in the "zigbee2mqtt2" folder which should look like this:
 
 ```yaml
 homeassistant:
@@ -185,26 +207,33 @@ version: 4
 devices: {}
 ```
 
-> ⚠️ Again, replace all `"------------------"` fields with valid entries.
-> Create a second user if needed for this instance.
+> [!CAUTION]
+> All fields containing "------------------" must be filled in by you! <br>
+> To create "user2", follow these steps: <br>
+> 📁 Step 1: Open Home Assistant → Settings → Add-ons → Mosquitto broker → Settings <br>
+> ✏️ Step 2: Add the user from the Home Assistant UI <br>
+> Go to "Settings" → "People → Users" <br>
+> Click “➕ Add user” <br>
+> Enter: <br>
+> Name: zigbee2 <br>
+> Username: zigbee2 <br>
+> Password: your_choice <br>
+> No admin rights <br>
+> 🔒 This user automatically gets access to Mosquitto if the Mosquitto Add-on is configured with customize: active: false (default setting).
 
----
+#### Installing and Navigating the Zigbee2MQTT Add-on:
 
-#### Finish Installation
+Standard installation of the Zigbee2MQTT Add-on from the newly added Repository, installation info can be found [HERE](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
 
-After configuring the folders:
-1. Install the Zigbee2MQTT Add-on from the new repositories.
-2. Before launching, update the config path as shown:
+> [!CAUTION]
+> DO NOT START Zigbee2MQTT Add-on yet — change the configuration path of the application as shown in the image below:
 
 |zigbee2mqtt1|zigbee2mqtt2|
 |----|----|
-|![conf1](/img/z2m_conf1.png)|![conf2](/img/z2m_conf2.png)|
+|![zigbee2mqtt1](/img/z2m_conf1.png)|![zigbee2mqtt2](/img/z2m_conf2.png)|
 
----
-
-#### Optional: Add Sensors in Home Assistant
-
-Append this to your `configuration.yaml`:
+> [!CAUTION]
+> DO NOT START YET — instead, add the following lines to Home Assistant's "configuration.yaml":
 
 ```yaml
 mqtt:
@@ -221,9 +250,8 @@ mqtt:
       json_attributes_template: "{{ value_json.data.value | tojson }}"
 ```
 
-This lets you visualize both Zigbee networks using tools like `zha-network-visualization-card` or through Developer Tools.
+This mqtt: sensor configuration is the perfect way to visualize both Zigbee2MQTT networks separately in Home Assistant — especially if you want to monitor them via cards like zha-network-visualization-card or just through Developer Tools → States → attributes.
 
----
-
-> 💡 If you liked this project, check out [more of my repositories here](https://github.com/Bacard1?tab=repositories).  
-> Got questions or need help? Feel free to reach out!
+> [!TIP]
+> If you liked this project, you can find more interesting repositories made by me [HERE](https://github.com/Bacard1?tab=repositories).<br>
+> If you encounter difficulties or have questions, don't hesitate to contact me.
