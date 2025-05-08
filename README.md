@@ -1,4 +1,4 @@
-# 🏠 Smart home with two zigbee networks via zigbee2mqtt
+# 🏠 HOME ASSISTANT with two zigbee networks via zigbee2mqtt
 
 [![PayPal donation](https://img.shields.io/badge/PayPal-donation-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
@@ -12,7 +12,7 @@ Building a reliable, scales and flexible Zigbee infrastructure in Home Assistant
 
 ## 📦 Content
 
-- [🏠 Smart home with two zigbee networks via zigbee2mqtt](#-smart-home-with-two-zigbee-networks-via-zigbee2mqtt)
+- [🏠 HOME ASSISTANT with two zigbee networks via zigbee2mqtt](#-home-assistant-with-two-zigbee-networks-via-zigbee2mqtt)
   - [📦 Content](#-content)
   - [⚙️ Hardware](#️-hardware)
   - [🛠️ Software and integration](#️-software-and-integration)

@@ -1,4 +1,4 @@
-# 🏠 Умен дом с две Zigbee мрежи чрез Zigbee2MQTT
+# 🏠 HOME ASSISTANT с две Zigbee мрежи чрез Zigbee2MQTT
 
 [![PayPal дарение](https://img.shields.io/badge/PayPal-Дари-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Скрипт](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
@@ -12,7 +12,7 @@
 
 ## 📦 Съдържание
 
-- [🏠 Умен дом с две Zigbee мрежи чрез Zigbee2MQTT](#-умен-дом-с-две-zigbee-мрежи-чрез-zigbee2mqtt)
+- [🏠 HOME ASSISTANT с две Zigbee мрежи чрез Zigbee2MQTT](#-home-assistant-с-две-zigbee-мрежи-чрез-zigbee2mqtt)
   - [📦 Съдържание](#-съдържание)
   - [⚙️ Хардуер](#️-хардуер)
   - [🛠️ Софтуер и интеграции](#️-софтуер-и-интеграции)
