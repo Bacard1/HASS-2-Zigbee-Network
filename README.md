@@ -1,16 +1,16 @@
-# 🏠 Умен дом с две Zigbee мрежи чрез Zigbee2MQTT
+# 🏠 A smart home with two zigbee networks via zigbee2mqtt
 
-[![PayPal дарение](https://img.shields.io/badge/PayPal-Дари-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
-![Скрипт](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
+[![PayPal donation](https://img.shields.io/badge/PayPal-donation-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
+![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
 
-Изграждане на надеждна, мащабируема и гъвкава Zigbee инфраструктура в Home Assistant чрез използването на две независими Zigbee мрежи, управлявани от Zigbee2MQTT, с цел подобряване на:
-- Покритие и стабилност
-- Мащабируемост при нарастващ брой устройства
-- Устойчивост при евентуални хардуерни или софтуерни сривове
+Building a reliable, scales and flexible Zigbee infrastructure in Home Assistant using two independent Zigbee networks managed by ZigBee2MQTT to improve:
+- Coverage and stability
+- Scaleness in a growing number of devices
+- Sustainability in possible hardware or software crashes
 
 ---
 
-## 📦 Съдържание
+## 📦 Content
 
 - [🏠 Умен дом с две Zigbee мрежи чрез Zigbee2MQTT](#-умен-дом-с-две-zigbee-мрежи-чрез-zigbee2mqtt)
 	- [📦 Съдържание](#-съдържание)
@@ -24,24 +24,24 @@
 
 ---
 S
-## ⚙️ Хардуер
-|img|model|network name|Чипсет|USB port|Wi-Fi|LAN port|VPN|
+## ⚙️ Hardware
+|img|model|network name|Chipset|USB port|Wi-Fi|LAN port|VPN|
 |----|----|----|----|----|----|----|----|
 |![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
 |![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
 
  
-## 🛠️ Софтуер и интеграции
+## 🛠️ Software and integration
 > [!CAUTION]
-> За да продължите се изисква вече инсталиран "MQTT Broker" и "Zigbee2MQTT"!!!
-> Ако нямате инсталиран "MQTT Broker" и "Zigbee2MQTT" можете да намерите подробна информация [ТУК](https://github.com/Bacard1/HASS-ZigbeeNetwork)
+> To continue, "MQTT Broker" and "Zigbee2MQT" are required !!!
+> If you do not have "MQTT Broker" and "Zigbee2MQT" installed you can find detailed information [Here](https://github.com/Bacard1/HASS-ZigbeeNetwork)
 
-### 📦 Добавяне на Zitgee2MQTT хранилища
+### 📦 Adding Zitgee2MQT storage
 > [!CAUTION]
-> За да инсталирате втора добавна "Zitgee2MQTT" е необходимо да добавите хранилището втори, трети ... пъти!
+> To install a second added "Zitgee2MQT" you need to add the repository second, third ... times!
 
 > [!WARNING]
-> За да добавите повече от едно хранилището още веднъж към линкът на хранилището добавете "/" в краят на линкът или изберете от табелата по долу ()
+> To add more than one repository once more to the storage link add "/" at the end of the link or select from the plate below 
 
 |zigbee2mqtt|zigbee2mqtt1|zigbee2mqtt2|
 |----|----|----|
@@ -52,25 +52,25 @@ S
 |----|----|----|
 |[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt///)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt////)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/////)|
 
-Резултат:
-![Две хранилища zigbee2mqtt](/img/2repo_zigbee2mqtt.png)
+Result:
+![Two Zigbee2mqtt storage facilities](/img/2repo_zigbee2mqtt.png)
 
-### 🔌 Конфигурация на Zigbee2MQTT
+### 🔌 Configuration на Zigbee2MQTT
 
 > [!CAUTION]
-> На крартината номер 1 показва директорията, а номер 2 и 3 показват новите папки който трябва да създадете ръчно. <br>
-> Не инсталирайте предварително добавките преди да стигнете до стъпката [Инсталиране и навигиране на Zigbee2MQTT Add-on:](#инсталиране-и-навигиране-на-zigbee2mqtt-add-on)
+> The number 1 shows the directory, and number 2 and 3 show the new folders you need to create manually.<br>
+> Do not pre -install the supplements before reaching the step [Installation and navigating Zigbee2MQTT Add-on:](#инсталиране-и-навигиране-на-zigbee2mqtt-add-on)
 
 ![zigbee2mqtt](/img/zigbee2mqtt_folder.png)
 
 #### **zigbee2mqtt1:**
 
-В папката "zigbee2mqtt1" ще конфигурираме следният кординатор.:
+In the "Zigbee2MQTT 1" folder, we will configure the following coordinator.:
 
 |![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
 |----|----|----|----|----|----|----|----|
 
-Създайте нов файл "configuration.yaml" в папката "zigbee2mqtt1" който трябва да изглежда така.:
+Create a new file "Configuration.yaml" in the "Zigbee2MQTT1" folder which should look like this.:
 
 ```yaml
 homeassistant:
@@ -127,27 +127,27 @@ devices: {}
 ```
 
 > [!CAUTION]
-> Всички полета със съдържание "------------------" трябва да бъдат попълнени от вас! <br>
-> За създаването на "user1" следвайте тези стъпки: <br>
-> 📁 Стъпка 1: Отвори Home Assistant → Настройки → Add-ons → Mosquitto broker → Настройки <br>
-> ✏️ Стъпка 2: Добави потребителя от Home Assistant UI <br>
-> Отиди в "Настройки" → "Потребители" (Settings → People → Users) <br>
-> Натисни “➕ Add user” <br>
-> Въведи: <br>
-> Име: zigbee2 <br>
-> Потребителско име: zigbee2 <br>
-> Парола: по_твой_избор <br>
-> Без администраторски права <br>
-> 🔒 Този потребител автоматично получава достъп до Mosquitto, ако Mosquitto Add-on е конфигуриран с customize: active: false (по подразбиране е така).
+> All fields with content "----------------" must be filled by you!<br>
+> To create "user1" follow these steps: <br>
+> 📁 Step 1: Open Home Assistant → Settings → Add-Aons → Mosquitto Broker → Settings <br>
+> ✏️ Step 2: Add user from Home Assistant UI <br>
+> Go to "Settings" → "Users" (Settings → People → Users) <br>
+> Press “➕ add user” <br>
+> Enter: <br>
+> Name: Zigbee2 <br>
+> Username: Zigbee2 <br>
+> Password: By time_ selection <br>
+> No Administrative Rights <br>
+> 🔒 This user automatically gets access to Mosquitto if Mosquitto Add-on is configured with Customize: Active: False (by default is).
 
 #### **zigbee2mqtt2:**
 
-В папката "zigbee2mqtt2" ще конфигурираме следният кординатор.:
+In the "Zigbee2MQTT 2" folder, we will configure the following coordinator.:
 
 |![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
 |----|----|----|----|----|----|----|----|
 
-Създайте нов файл "configuration.yaml" в папката "zigbee2mqtt2" който трябва да изглежда така.:
+Create a new file "Configuration.Yaml" in the "Zigbee2MQTT2" folder which should look like this.:
 
 ```yaml
 homeassistant:
@@ -207,32 +207,32 @@ devices: {}
 ```
 
 > [!CAUTION]
-> Всички полета със съдържание "------------------" трябва да бъдат попълнени от вас! <br>
-> Необходимо е  създаването на "user2" следвайте тези стъпки: <br>
-> 📁 Стъпка 1: Отвори Home Assistant → Настройки → Add-ons → Mosquitto broker → Настройки <br>
-> ✏️ Стъпка 2: Добави потребителя от Home Assistant UI <br>
-> Отиди в "Настройки" → "Потребители" (Settings → People → Users) <br>
-> Натисни “➕ Add user” <br>
-> Въведи: <br>
-> Име: zigbee2 <br>
-> Потребителско име: zigbee2 <br>
-> Парола: по_твой_избор <br>
-> Без администраторски права <br>
-> 🔒 Този потребител автоматично получава достъп до Mosquitto, ако Mosquitto Add-on е конфигуриран с customize: active: false (по подразбиране е така).
+> All fields with content "----------------" must be filled by you!<br>
+> You need to create "user2" Follow these steps: <br>
+> 📁 Step 1: Open Home Assistant → Settings → Add-Aons → Mosquitto Broker → Settings <br>
+> ✏️ Step 2: Add user from Home Assistant UI <br>
+> Go to "Settings" → "Users" (Settings → People → Users) <br>
+> Press “➕ add user” <br>
+> Enter: <br>
+> Name: Zigbee2 <br>
+> Username: Zigbee2 <br>
+> Password: By time_ selection <br>
+> No Administrative Rights <br>
+> 🔒 This user automatically gets access to Mosquitto if Mosquitto Add-on is configured with Customize: Active: False (default is).
 
-#### Инсталиране и навигиране на Zigbee2MQTT Add-on:
+#### Installing and navigating Zigbee2mqtt Add-on:
 
-Стандартна инсталация на Zigbee2MQTT Add-on от ново добавеното Repository, информация за инсталирането на Zigbee2MQTT Add-on [ТУК](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
+Standard installation of Zigbee2MQTT Add-on from the new added Repository, Information on Installing the Zigbee2MQTT Add-on [ТУК](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
 
 > [!CAUTION]
-> НЕ СТАРТИРАЙТЕ ВСЕ ОЩЕ Zigbee2MQTT Add-on промени пътят до конфигурацията на приложението както на снимката по долу:
+> Do not start the Zigbee2MQTT Add-On Change the Road to the Application of the App as in the photo below:
 
 |zigbee2mqtt1|zigbee2mqtt2|
 |----|----|
 |![zigbee2mqtt1](/img/z2m_conf1.png)|![zigbee2mqtt2](/img/z2m_conf2.png)|
 
 > [!CAUTION]
-> НЕ СТАРТИРАЙТЕ ВСЕ ,а добавете в "configuration.yaml" на HomeAsssistant следните редове:
+> Do not start all the time, but add to "Configuration.yaml" to Homesssistant the following lines:
 
 ```yaml
 mqtt:
@@ -249,4 +249,8 @@ mqtt:
       json_attributes_template: "{{ value_json.data.value | tojson }}"
 ```
 
-Тази конфигурация на mqtt: сензори е перфектният начин да визуализираш двете Zigbee2MQTT мрежи поотделно в Home Assistant — особено ако искаш да ги следиш чрез карти като zha-network-visualization-card или просто чрез Developer Tools → States → атрибути.
+This MQTT: Sensor configuration is the perfect way to visualize the two Zigbee2mqt networks separately in Home Assistant-especially if you want to follow them through cards like Zha-Network-Visualization-Card or simply via Developer Tools → States → Init.
+
+> [!TIP]
+> If you liked this project, [HERE](https://github.com/bacard1?tab=repositories) you will find more interesting borders made by me. <br>
+> If you have difficulty or have questions, do not hesitate to contact me.
