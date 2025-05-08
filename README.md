@@ -1,4 +1,4 @@
-# 🏠 A smart home with two zigbee networks via zigbee2mqtt
+# 🏠 Smart home with two zigbee networks via zigbee2mqtt
 
 [![PayPal donation](https://img.shields.io/badge/PayPal-donation-синьо?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
@@ -12,16 +12,16 @@ Building a reliable, scales and flexible Zigbee infrastructure in Home Assistant
 
 ## 📦 Content
 
-- [🏠 Умен дом с две Zigbee мрежи чрез Zigbee2MQTT](#-умен-дом-с-две-zigbee-мрежи-чрез-zigbee2mqtt)
-	- [📦 Съдържание](#-съдържание)
-	- [⚙️ Хардуер](#️-хардуер)
-	- [🛠️ Софтуер и интеграции](#️-софтуер-и-интеграции)
-		- [📦 Добавяне на Zitgee2MQTT хранилища](#-добавяне-на-zitgee2mqtt-хранилища)
-		- [🔌 Конфигурация на Zigbee2MQTT](#-конфигурация-на-zigbee2mqtt)
-			- [**zigbee2mqtt1:**](#zigbee2mqtt1)
-			- [**zigbee2mqtt2:**](#zigbee2mqtt2)
-			- [Инсталиране и навигиране на Zigbee2MQTT Add-on:](#инсталиране-и-навигиране-на-zigbee2mqtt-add-on)
-
+- [🏠 Smart home with two zigbee networks via zigbee2mqtt](#-smart-home-with-two-zigbee-networks-via-zigbee2mqtt)
+  - [📦 Content](#-content)
+  - [⚙️ Hardware](#️-hardware)
+  - [🛠️ Software and integration](#️-software-and-integration)
+    - [📦 Adding Zitgee2MQT storage](#-adding-zitgee2mqt-storage)
+    - [🔌 Configuration на Zigbee2MQTT](#-configuration-на-zigbee2mqtt)
+      - [**zigbee2mqtt1:**](#zigbee2mqtt1)
+      - [**zigbee2mqtt2:**](#zigbee2mqtt2)
+      - [Installing and navigating Zigbee2mqtt Add-on:](#installing-and-navigating-zigbee2mqtt-add-on)
+	
 ---
 S
 ## ⚙️ Hardware
@@ -30,7 +30,6 @@ S
 |![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
 |![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
 
- 
 ## 🛠️ Software and integration
 > [!CAUTION]
 > To continue, "MQTT Broker" and "Zigbee2MQT" are required !!!
@@ -46,7 +45,6 @@ S
 |zigbee2mqtt|zigbee2mqtt1|zigbee2mqtt2|
 |----|----|----|
 |[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt//)|
-
 
 |zigbee2mqtt3|zigbee2mqtt4|zigbee2mqtt5
 |----|----|----|
@@ -222,7 +220,7 @@ devices: {}
 
 #### Installing and navigating Zigbee2mqtt Add-on:
 
-Standard installation of Zigbee2MQTT Add-on from the new added Repository, Information on Installing the Zigbee2MQTT Add-on [ТУК](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
+Standard installation of Zigbee2MQTT Add-on from the new added Repository, Information on Installing the Zigbee2MQTT Add-on [Here](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
 
 > [!CAUTION]
 > Do not start the Zigbee2MQTT Add-On Change the Road to the Application of the App as in the photo below:
