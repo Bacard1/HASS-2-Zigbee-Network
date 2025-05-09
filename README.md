@@ -7,10 +7,14 @@
 [![Български](https://img.shields.io/badge/Български-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
 )](BG.md)
 
-Building a reliable, scalable, and flexible Zigbee infrastructure in Home Assistant using two independent Zigbee networks managed by Zigbee2MQTT, to improve:
-- Coverage and stability
-- Scalability with an increasing number of devices
-- Resilience against potential hardware or software failures
+HASS-ZigbeeNetwork is a personal Home Assistant project that demonstrates the integration of two independent Zigbee networks using Zigbee2MQTT.
+The goal is to build a scalable, reliable, and flexible Zigbee infrastructure by combining multiple coordinators (e.g. SLZB-06, Sonoff Dongle 3.0).
+This setup helps improve coverage, device distribution, and redundancy in smart home environments.
+
+✅ Dual Zigbee networks
+✅ Zigbee2MQTT configuration
+✅ Enhanced performance and reliability
+✅ YAML examples and automation ideas
 
 ---
 
