@@ -1,13 +1,19 @@
 ![BANNER](/img/benner.png)
 
 # 🏠 HOME ASSISTANT mit zwei Zigbee-Netzwerken über Zigbee2MQTT
-[![Home Assistant](https://img.shields.io/badge/🏠_Home_Assistant-41BDF5?logo=homeassistant)](https://www.home-assistant.io/) [![Donate via PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
-![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
-[![Български](https://img.shields.io/badge/BG_Български-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?color=ff00d8)](https://opensource.org/licenses/MIT)
+![GitHub last commit](https://img.shields.io/github/last-commit/Bacard1/HASS-2-Zigbee-Network.svg?color=ff00d8)
+[![hacs_badge](https://img.shields.io/badge/HACS-2025.5.3-orange.svg?color=ff00d8)](https://github.com/hacs/integration)
+
+[![Home Assistant](https://img.shields.io/badge/.-HOME_ASSISTANT-blue?logo=homeassistant)](https://www.home-assistant.io/) 
+[![Donate via PayPal](https://img.shields.io/badge/PayPal-DONATE-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
+![Script](https://img.shields.io/badge/Script-YAML-blue?logo=yaml)
+
+[![Български](https://img.shields.io/badge/BG-ЕЗИК-gree?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
 )](BG.md)
-[![Deutch](https://img.shields.io/badge/DE_Deutsche-sprache-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
+[![Deutch](https://img.shields.io/badge/DE-SPRACHE-gree?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
 )](DE.md)
-[![English](https://img.shields.io/badge/EN_English-language-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg)](README.md)
+[![English](https://img.shields.io/badge/EN-LANGUAGE-gree?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg)](README.md)
 
 HASS-ZigbeeNetwork ist mein persönliches Home-Assistant-Projekt, das zeigt, wie zwei unabhängige Zigbee-Netzwerke über Zigbee2MQTT integriert werden können.
 Ziel ist es, eine zuverlässige, flexible und skalierbare Zigbee-Infrastruktur durch die Verwendung mehrerer Koordinatoren (z. B. SLZB-06, Sonoff Dongle 3.0) aufzubauen.
@@ -23,14 +29,14 @@ Diese Konfiguration verbessert die Abdeckung, die Geräteverteilung und die Ausf
 ## 📦 Inhalt
 
 - [🏠 HOME ASSISTANT mit zwei Zigbee-Netzwerken über Zigbee2MQTT](#-home-assistant-mit-zwei-zigbee-netzwerken-über-zigbee2mqtt)
-	- [📦 Inhalt](#-inhalt)
-	- [⚙️ Hardware](#️-hardware)
-	- [🛠️ Software und Integrationen](#️-software-und-integrationen)
-		- [📦 Hinzufügen von Zigbee2MQTT-Repositories](#-hinzufügen-von-zigbee2mqtt-repositories)
-		- [🔌 Konfiguration von Zigbee2MQTT](#-konfiguration-von-zigbee2mqtt)
-			- [**zigbee2mqtt1:**](#zigbee2mqtt1)
-			- [**zigbee2mqtt2:**](#zigbee2mqtt2)
-			- [Installation und Navigation des Zigbee2MQTT Add-ons:](#installation-und-navigation-des-zigbee2mqtt-add-ons)
+  - [📦 Inhalt](#-inhalt)
+  - [⚙️ Hardware](#️-hardware)
+  - [🛠️ Software und Integrationen](#️-software-und-integrationen)
+    - [📦 Hinzufügen von Zigbee2MQTT-Repositories](#-hinzufügen-von-zigbee2mqtt-repositories)
+    - [🔌 Konfiguration von Zigbee2MQTT](#-konfiguration-von-zigbee2mqtt)
+      - [**zigbee2mqtt1:**](#zigbee2mqtt1)
+      - [**zigbee2mqtt2:**](#zigbee2mqtt2)
+      - [Installation und Navigation des Zigbee2MQTT Add-ons:](#installation-und-navigation-des-zigbee2mqtt-add-ons)
 
 ---
 
