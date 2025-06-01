@@ -1,7 +1,6 @@
 ![BANNER](/img/benner.png)
 
-# 🏠 HOME ASSISTANT with Two Zigbee Networks via Zigbee2MQTT
-
+# 🏠 HOME ASSISTANT mit zwei Zigbee-Netzwerken über Zigbee2MQTT
 [![Home Assistant](https://img.shields.io/badge/🏠_Home_Assistant-41BDF5?logo=homeassistant)](https://www.home-assistant.io/) [![Donate via PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=AAWFZVF2XCP5A)
 ![Script](https://img.shields.io/badge/logo-yaml-green?logo=yaml)
 [![Български](https://img.shields.io/badge/BG_Български-език-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg
@@ -10,48 +9,49 @@
 )](DE.md)
 [![English](https://img.shields.io/badge/EN_English-language-green?logo=translate&labelColor=gray&style=flat-square&link=https://example.com/bg)](README.md)
 
-HASS-ZigbeeNetwork is a personal Home Assistant project that demonstrates the integration of two independent Zigbee networks using Zigbee2MQTT.
-The goal is to build a scalable, reliable, and flexible Zigbee infrastructure by combining multiple coordinators (e.g. SLZB-06, Sonoff Dongle 3.0).
-This setup helps improve coverage, device distribution, and redundancy in smart home environments.
+HASS-ZigbeeNetwork ist mein persönliches Home-Assistant-Projekt, das zeigt, wie zwei unabhängige Zigbee-Netzwerke über Zigbee2MQTT integriert werden können.
+Ziel ist es, eine zuverlässige, flexible und skalierbare Zigbee-Infrastruktur durch die Verwendung mehrerer Koordinatoren (z. B. SLZB-06, Sonoff Dongle 3.0) aufzubauen.
+Diese Konfiguration verbessert die Abdeckung, die Geräteverteilung und die Ausfallsicherheit.
 
-✅ Dual Zigbee networks
-✅ Zigbee2MQTT configuration
-✅ Enhanced performance and reliability
-✅ YAML examples and automation ideas
+✅ Zwei Zigbee-Netzwerke
+✅ Zigbee2MQTT-Konfiguration
+✅ Verbesserte Leistung und Zuverlässigkeit
+✅ Beispiele mit YAML und Automatisierungen
 
 ---
 
-## 📦 Table of Contents
+## 📦 Inhalt
 
-- [🏠 HOME ASSISTANT with Two Zigbee Networks via Zigbee2MQTT](#-home-assistant-with-two-zigbee-networks-via-zigbee2mqtt)
-  - [📦 Table of Contents](#-table-of-contents)
-  - [⚙️ Hardware](#️-hardware)
-  - [🛠️ Software and Integrations](#️-software-and-integrations)
-    - [📦 Adding Zigbee2MQTT Repositories](#-adding-zigbee2mqtt-repositories)
-    - [🔌 Zigbee2MQTT Configuration](#-zigbee2mqtt-configuration)
-      - [**zigbee2mqtt1:**](#zigbee2mqtt1)
-      - [**zigbee2mqtt2:**](#zigbee2mqtt2)
-      - [Installing and Navigating the Zigbee2MQTT Add-on:](#installing-and-navigating-the-zigbee2mqtt-add-on)
+- [🏠 HOME ASSISTANT mit zwei Zigbee-Netzwerken über Zigbee2MQTT](#-home-assistant-mit-zwei-zigbee-netzwerken-über-zigbee2mqtt)
+	- [📦 Inhalt](#-inhalt)
+	- [⚙️ Hardware](#️-hardware)
+	- [🛠️ Software und Integrationen](#️-software-und-integrationen)
+		- [📦 Hinzufügen von Zigbee2MQTT-Repositories](#-hinzufügen-von-zigbee2mqtt-repositories)
+		- [🔌 Konfiguration von Zigbee2MQTT](#-konfiguration-von-zigbee2mqtt)
+			- [**zigbee2mqtt1:**](#zigbee2mqtt1)
+			- [**zigbee2mqtt2:**](#zigbee2mqtt2)
+			- [Installation und Navigation des Zigbee2MQTT Add-ons:](#installation-und-navigation-des-zigbee2mqtt-add-ons)
 
 ---
 
 ## ⚙️ Hardware
-|img|model|network name|Chipset|USB port|Wi-Fi|LAN port|VPN|
+|img|model|Netzwerkname|Chipsatz|USB-Anschluss|Wi-Fi|LAN-Anschluss|VPN|
 |----|----|----|----|----|----|----|----|
 |![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
 |![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
 
-## 🛠️ Software and Integrations
+ 
+## 🛠️ Software und Integrationen
 > [!CAUTION]
-> You must already have "MQTT Broker" and "Zigbee2MQTT" installed to continue!!!
-> If you don't have "MQTT Broker" and "Zigbee2MQTT" installed, detailed information can be found [HERE](https://github.com/Bacard1/HASS-ZigbeeNetwork)
+> Um fortzufahren, müssen bereits "MQTT Broker" und "Zigbee2MQTT" installiert sein!!!
+> Falls Sie "MQTT Broker" und "Zigbee2MQTT" noch nicht installiert haben, finden Sie detaillierte Informationen [HIER](https://github.com/Bacard1/HASS-ZigbeeNetwork)
 
-### 📦 Adding Zigbee2MQTT Repositories
+### 📦 Hinzufügen von Zigbee2MQTT-Repositories
 > [!CAUTION]
-> To install a second Zigbee2MQTT add-on, you need to add the repository a second, third... time!
+> Um eine zweite "Zigbee2MQTT"-Instanz zu installieren, müssen Sie das Repository ein zweites, drittes ... Mal hinzufügen!
 
 > [!WARNING]
-> To add the same repository more than once, append a "/" at the end of the repository URL or select from the table below:
+> Um mehr als ein Repository hinzuzufügen, fügen Sie am Ende des Repository-Links "/" hinzu oder wählen Sie aus der folgenden Tabelle ()
 
 |zigbee2mqtt|zigbee2mqtt1|zigbee2mqtt2|
 |----|----|----|
@@ -62,25 +62,25 @@ This setup helps improve coverage, device distribution, and redundancy in smart 
 |----|----|----|
 |[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt///)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt////)|[![ADD REPO](/img/button%20ADD%20ADD-ON%20REPOSITORY%20TO%20MY.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/////)|
 
-_Result:_
-![Two zigbee2mqtt repositories](/img/2repo_zigbee2mqtt.png)
+Ergebnis:
+![Zwei zigbee2mqtt-Repositories](/img/2repo_zigbee2mqtt.png)
 
-### 🔌 Zigbee2MQTT Configuration
+### 🔌 Konfiguration von Zigbee2MQTT
 
 > [!CAUTION]
-> In the image, number 1 shows the directory, and numbers 2 and 3 show the new folders you need to create manually. <br>
-> Do not install the add-ons before reaching the step [Installing and Navigating the Zigbee2MQTT Add-on:](#installing-and-navigating-the-zigbee2mqtt-add-on)
+> Bild 1 zeigt das Verzeichnis, und die Bilder 2 und 3 zeigen die neuen Ordner, die Sie manuell erstellen müssen. <br>
+> Installieren Sie die Add-ons nicht vor Erreichen des Schritts [Installation und Navigation des Zigbee2MQTT Add-ons:](#installation-und-navigation-des-zigbee2mqtt-add-ons)
 
 ![zigbee2mqtt](/img/zigbee2mqtt_folder.png)
 
 #### **zigbee2mqtt1:**
 
-In the "zigbee2mqtt1" folder we will configure the following coordinator:
+Im Ordner "zigbee2mqtt1" konfigurieren wir den folgenden Koordinator:
 
 |![SONOFF](/img/Sonoff%20zigbee3.0%20Dongel.png)|SONOFF Zigbee 3.0 USB Dongle Plus|zigbee2mqtt1|CC2652P|✅|❌|❌|❌|
 |----|----|----|----|----|----|----|----|
 
-Create a new file "configuration.yaml" in the "zigbee2mqtt1" folder which should look like this:
+Erstellen Sie eine neue Datei "configuration.yaml" im Ordner "zigbee2mqtt1", die wie folgt aussehen sollte:
 
 ```yaml
 homeassistant:
@@ -137,27 +137,27 @@ devices: {}
 ```
 
 > [!CAUTION]
-> All fields containing "------------------" must be filled in by you! <br>
-> To create "user1", follow these steps: <br>
-> 📁 Step 1: Open Home Assistant → Settings → Add-ons → Mosquitto broker → Settings <br>
-> ✏️ Step 2: Add the user from the Home Assistant UI <br>
-> Go to "Settings" → "People → Users" <br>
-> Click “➕ Add user” <br>
-> Enter: <br>
+> Alle Felder mit dem Inhalt "------------------" müssen von Ihnen ausgefüllt werden! <br>
+> Für die Erstellung von "user1" folgen Sie diesen Schritten: <br>
+> 📁 Schritt 1: Öffnen Sie Home Assistant → Einstellungen → Add-ons → Mosquitto broker → Einstellungen <br>
+> ✏️ Schritt 2: Fügen Sie den Benutzer über die Home-Assistant-Oberfläche hinzu <br>
+> Gehen Sie zu "Einstellungen" → "Personen" (Settings → People → Users) <br>
+> Klicken Sie auf “➕ Benutzer hinzufügen” <br>
+> Geben Sie ein: <br>
 > Name: zigbee2 <br>
-> Username: zigbee2 <br>
-> Password: your_choice <br>
-> No admin rights <br>
-> 🔒 This user automatically gets access to Mosquitto if the Mosquitto Add-on is configured with customize: active: false (default setting).
+> Benutzername: zigbee2 <br>
+> Passwort: nach_Ihrer_Wahl <br>
+> Keine Administratorrechte <br>
+> 🔒 Dieser Benutzer erhält automatisch Zugriff auf Mosquitto, wenn das Mosquitto Add-on mit customize: active: false konfiguriert ist (Standard).
 
 #### **zigbee2mqtt2:**
 
-In the "zigbee2mqtt2" folder we will configure the following coordinator:
+Im Ordner "zigbee2mqtt2" konfigurieren wir den folgenden Koordinator:
 
 |![SLZB](/img/SLZB-06p10.png)|SLZB-06p10|zigbee2mqtt2|CC2652P|✅|✅|✅|✅|
 |----|----|----|----|----|----|----|----|
 
-Create a new file "configuration.yaml" in the "zigbee2mqtt2" folder which should look like this:
+Erstellen Sie eine neue Datei "configuration.yaml" im Ordner "zigbee2mqtt2", die wie folgt aussehen sollte:
 
 ```yaml
 homeassistant:
@@ -217,32 +217,32 @@ devices: {}
 ```
 
 > [!CAUTION]
-> All fields containing "------------------" must be filled in by you! <br>
-> To create "user2", follow these steps: <br>
-> 📁 Step 1: Open Home Assistant → Settings → Add-ons → Mosquitto broker → Settings <br>
-> ✏️ Step 2: Add the user from the Home Assistant UI <br>
-> Go to "Settings" → "People → Users" <br>
-> Click “➕ Add user” <br>
-> Enter: <br>
+> Alle Felder mit dem Inhalt "------------------" müssen von Ihnen ausgefüllt werden! <br>
+> Für die Erstellung von "user2" folgen Sie diesen Schritten: <br>
+> 📁 Schritt 1: Öffnen Sie Home Assistant → Einstellungen → Add-ons → Mosquitto broker → Einstellungen <br>
+> ✏️ Schritt 2: Fügen Sie den Benutzer über die Home-Assistant-Oberfläche hinzu <br>
+> Gehen Sie zu "Einstellungen" → "Personen" (Settings → People → Users) <br>
+> Klicken Sie auf “➕ Benutzer hinzufügen” <br>
+> Geben Sie ein: <br>
 > Name: zigbee2 <br>
-> Username: zigbee2 <br>
-> Password: your_choice <br>
-> No admin rights <br>
-> 🔒 This user automatically gets access to Mosquitto if the Mosquitto Add-on is configured with customize: active: false (default setting).
+> Benutzername: zigbee2 <br>
+> Passwort: nach_Ihrer_Wahl <br>
+> Keine Administratorrechte <br>
+> 🔒 Dieser Benutzer erhält automatisch Zugriff auf Mosquitto, wenn das Mosquitto Add-on mit customize: active: false konfiguriert ist (Standard).
 
-#### Installing and Navigating the Zigbee2MQTT Add-on:
+#### Installation und Navigation des Zigbee2MQTT Add-ons:
 
-Standard installation of the Zigbee2MQTT Add-on from the newly added Repository, installation info can be found [HERE](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
+Standardinstallation des Zigbee2MQTT Add-ons aus dem neu hinzugefügten Repository. Informationen zur Installation des Zigbee2MQTT Add-ons finden Sie [HIER](https://github.com/Bacard1/HASS-ZigbeeNetwork).<br>
 
 > [!CAUTION]
-> DO NOT START Zigbee2MQTT Add-on yet — change the configuration path of the application as shown in the image below:
+> STARTEN Sie das Zigbee2MQTT Add-on noch NICHT. Ändern Sie den Pfad zur Konfiguration der Anwendung wie im folgenden Bild gezeigt:
 
 |zigbee2mqtt1|zigbee2mqtt2|
 |----|----|
 |![zigbee2mqtt1](/img/z2m_conf1.png)|![zigbee2mqtt2](/img/z2m_conf2.png)|
 
 > [!CAUTION]
-> DO NOT START YET — instead, add the following lines to Home Assistant's "configuration.yaml":
+> STARTEN Sie noch NICHT, sondern fügen Sie in die "configuration.yaml" von Home Assistant die folgenden Zeilen ein:
 
 ```yaml
 mqtt:
@@ -259,8 +259,8 @@ mqtt:
       json_attributes_template: "{{ value_json.data.value | tojson }}"
 ```
 
-This mqtt: sensor configuration is the perfect way to visualize both Zigbee2MQTT networks separately in Home Assistant — especially if you want to monitor them via cards like zha-network-visualization-card or just through Developer Tools → States → attributes.
+Diese MQTT-Sensor-Konfiguration ist die perfekte Möglichkeit, die beiden Zigbee2MQTT-Netzwerke separat in Home Assistant zu visualisieren – besonders wenn Sie sie mit Karten wie zha-network-visualization-card oder einfach über Developer Tools → States → Attribute überwachen möchten.
 
 > [!TIP]
-> If you liked this project, you can find more interesting repositories made by me [HERE](https://github.com/Bacard1?tab=repositories).<br>
-> If you encounter difficulties or have questions, don't hesitate to contact me.
+> Wenn Ihnen dieses Projekt gefallen hat, finden Sie [HIER](https://github.com/Bacard1?tab=repositories) weitere interessante Repositories von mir.<br>
+> Falls Sie auf Schwierigkeiten stoßen oder Fragen haben, zögern Sie nicht, mich zu kontaktieren.
